@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NSTAR Inventory Dashboard</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="dashboard-header">
+        <div>
+            <h1>NSTAR</h1>
+            <p>Smart Inventory Dashboard</p>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             INVENTORY SUMMARY
+        ========================== -->
+
+        <section class="summary-section">
+
+            <div class="summary-card">
+                <h3>Total Products</h3>
+                <p id="total-products">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Units</h3>
+                <p id="total-units">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Low Stock</h3>
+                <p id="low-stock">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INVENTORY
+        ========================== -->
+
+        <section class="inventory-section">
+
+            <h2>Inventory</h2>
+
+            <div class="inventory-controls">
+
+                <input
+                    type="text"
+                    id="inventory-search"
+                    placeholder="Search SKU or product..."
+                >
+
+                <select id="stock-filter">
+                    <option value="all">All Stock</option>
+                    <option value="in-stock">In Stock</option>
+                    <option value="low-stock">Low Stock</option>
+                </select>
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Min. Stock</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="inventory-table">
+                    <!-- JavaScript will add inventory here -->
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- =========================
+             RECENT ACTIVITY
+        ========================== -->
+
+        <section class="activity-section">
+
+            <h2>Recent Activity</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>SKU</th>
+                        <th>Product</th>
+                        <th>Action</th>
+                        <th>Change</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+
+                <tbody id="activity-table">
+                    <!-- JavaScript will add transactions here -->
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
